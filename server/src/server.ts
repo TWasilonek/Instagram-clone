@@ -12,11 +12,10 @@ app.use(logger("dev"));
  * Error Handler. Provides full stack - remove for production
  */
 if (!isProduction()) {
-  // only use in development
   app.use(errorHandler());
 }
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 
 /**
  * Start Express server.
