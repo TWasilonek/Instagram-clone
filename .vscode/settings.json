@@ -13,5 +13,8 @@
       "database": "instagram",
       "username": "root"
     }
-  ]
+  ],
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
 }
