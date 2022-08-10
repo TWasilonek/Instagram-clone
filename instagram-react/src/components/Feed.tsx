@@ -1,14 +1,16 @@
+import Posts from "./Posts";
 import Stories from "./Stories";
 
 const Feed = () => {
   return (
-    <main>
-      <section>
+    <main className=" ">
+      <section className="">
         <Stories />
-        {/* Profile */}
+        <Posts />
       </section>
 
-      <section>
+      <section className="">
+        column
         {/* Mini Profile */}
         {/* Suggestions */}
       </section>

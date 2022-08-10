@@ -24,7 +24,6 @@ const Stories: FC = () => {
       randomData.push(createRandomUser());
     });
     setData(randomData);
-    console.log(randomData);
   }, []);
 
   return (
