@@ -10,8 +10,13 @@ type StoryThumbnailProps = {
 const StoryThumbnail: FC<StoryThumbnailProps> = ({ id, img, username }) => {
   return (
     <div>
-      <Image width={40} height={40} src={img} alt="user story avatar" />
-      <p>{username}</p>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={img}
+        alt="user story avatar"
+        className="h-14 rounded-full p-[2px] border-red-500 border-2 cursor-pointer"
+      />
+      <p className="text-xs w-14 truncate">{username}</p>
     </div>
   );
 };

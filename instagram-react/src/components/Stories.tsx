@@ -28,7 +28,7 @@ const Stories: FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className="flex space-x-2 bg-white p-6 mt-8 border-gray-200 border overflow-x-scroll rounded-sm scrollbar-none">
       {data.map(({ id, img, username }) => (
         <StoryThumbnail key={id} id={id} img={img} username={username} />
       ))}
