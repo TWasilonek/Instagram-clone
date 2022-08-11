@@ -8,12 +8,13 @@ import {
   EmojiHappyIcon,
 } from "@heroicons/react/outline";
 import { PostType } from "../types";
+import { IMAGE_WIDTH } from "../constants";
 
 type PostProps = PostType & {};
 
 const Post: FC<PostProps> = ({ id, img, username, userImg, caption }) => {
   return (
-    <div className="bg-white my-7 border ronded-md">
+    <div className="bg-white my-7 border rounded-[7px] border-neutral-300">
       <div className="flex items-center p-5">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -25,13 +26,15 @@ const Post: FC<PostProps> = ({ id, img, username, userImg, caption }) => {
         <DotsHorizontalIcon className="h-5 ml-auto" />
       </div>
 
+      {/* <div className="w-full h-[470px] relative"> */}
       <Image
         src={img}
         alt="post image"
-        width={470}
-        height={470}
+        width={IMAGE_WIDTH}
+        height={IMAGE_WIDTH}
         className="object-cover object-center"
       />
+      {/* </div> */}
 
       <div className="flex justify-between px-4 pt-4">
         <div className="flex space-x-4">
