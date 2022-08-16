@@ -1,23 +1,26 @@
-import { COLUMN_GAP, POST_COLUMN_WIDTH, RIGHT_PANE_WIDTH } from "../constants";
+import MiniProfile from "./MiniProfile";
 import Posts from "./Posts";
 import Stories from "./Stories";
-
-const MAX_PAGE_WIDTH = POST_COLUMN_WIDTH + COLUMN_GAP + RIGHT_PANE_WIDTH;
 
 const Feed = () => {
   return (
     <main
-      className={`grid justify-center grid-flow-col md:max-w-[${MAX_PAGE_WIDTH}px] mx-auto`}
+      // FIXME: tailwind doesn't allow to create class names with JS varaibles interpolation
+      // POST_COLUMN_WIDTH + COLUMN_GAP + RIGHT_PANE_WIDTH = MAX_PAGE_WIDTH
+      // 470 + 32 + 319 = 821
+      className="grid justify-center grid-flow-col gap-[32px] md:max-w-[821px] mx-auto"
     >
-      <section className={`w-[${POST_COLUMN_WIDTH}px]`}>
+      {/* FIXME: tailwind doesn't allow to create class names with JS varaibles interpolation */}
+      <section className="w-[470px]">
         <Stories />
         <Posts />
       </section>
 
       <section className="hidden md:inline-grid">
-        column
-        {/* Mini Profile */}
-        {/* Suggestions */}
+        <div className="fixed w-[319px]">
+          <MiniProfile />
+          {/* Suggestions */}
+        </div>
       </section>
     </main>
   );
